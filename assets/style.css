@@ -1,0 +1,342 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 100vh;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background: none;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.search-container {
+    position: relative;
+    width: 25%;
+    /* Sesuaikan lebar search bar */
+}
+
+.search-container .bxs-search {
+    position: absolute;
+    left: 10px;
+    /* Jarak ikon dari sisi kiri */
+    top: 50%;
+    transform: translateY(-50%);
+    color: #aaa;
+    /* Warna ikon */
+    font-size: 18px;
+    pointer-events: none;
+    /* Pastikan ikon tidak mengganggu input */
+}
+
+.search-container .search_bar {
+    width: 100%;
+    padding: 12px 12px 12px 35px;
+    /* Tambahkan padding kiri untuk ikon */
+    border-radius: 12px;
+    background-color: #383838;
+    color: #fff;
+    /* Warna teks */
+    border: none;
+}
+
+.search-container .search_bar::placeholder {
+    color: #aaa;
+    /* Warna placeholder */
+}
+
+.search-container .search_bar:focus {
+    outline: none;
+    /* Hilangkan garis biru saat fokus */
+    box-shadow: 0 0 5px #2ecc71;
+    /* Tambahkan efek fokus */
+}
+
+.billboard {
+    width: 100%;
+    background: #2ecc71;
+    padding: 20px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.billboard-item {
+    color: white;
+}
+
+.products {
+    padding: 20px;
+    flex-grow: 1;
+    width: calc(100% - 32px);
+    box-sizing: border-box;
+}
+
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.product {
+    position: relative;
+    background-color: #323232;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+    /* Menghindari gambar keluar dari kontainer */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 350px;
+    /* Menjaga konsistensi ukuran */
+}
+
+.product img {
+    max-width: 100%;
+    height: 200px;
+    /* Menjaga gambar tetap proporsional */
+    object-fit: contain;
+    /* Menjaga gambar tidak pecah dan menyesuaikan ukuran */
+    border-radius: 8px;
+    margin-bottom: 15px;
+    /* Memberi jarak antara gambar dan teks */
+}
+
+.login-register img {
+    height: 15px;
+    margin-right: 7px;
+}
+
+.product h3 {
+    font-family: "Plus Jakarta Sans", serif;
+    font-size: 15px;
+    font-weight: 700;
+    text-align: left;
+    margin: 10px 0;
+}
+
+.harga {
+    font-family: "Plus Jakarta Sans", serif;
+    font-weight: 500;
+    font-size: 15px;
+    color: #1EFF57;
+    text-align: left;
+}
+
+.login-register {
+    border: 1px solid white;
+    border-radius: 50px;
+    padding: 10px 18px;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.login-register a {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.login-register:hover {
+    background-color: rgb(255, 255, 255);
+    border-color: #2ecc71;
+}
+
+.login-register:hover .tulisan-login {
+    color: #2ecc71;
+}
+
+.user-area {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.badge {
+    background-color: #e63946;
+    color: white;
+    border-radius: 50%;
+    font-size: 12px;
+    padding: 3px 6px;
+    position: absolute;
+    margin-left: -10px;
+    margin-top: -10px;
+}
+
+
+/* bagian profile dropdown */
+
+.profile-info {
+    position: relative;
+}
+
+/* .profile-dropdown {
+    position: relative;
+    cursor: pointer;
+} */
+
+.profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* .dropdown-menu {
+    display: none;
+    position: absolute;
+    right: 0;
+    background: white;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 150px;
+} */
+
+/* .profile-dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 10px;
+    color: black;
+    text-decoration: none;
+}
+
+.dropdown-menu a:hover {
+    background: #f0f0f0;
+} */
+
+
+.dropdown-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.username {
+    color: #fff;
+    padding: 10px 15px;
+}
+.dropdown-menu ul li {
+    border-bottom: 1px solid #eee;
+}
+
+.dropdown-menu ul li:last-child {
+    border-bottom: none;
+}
+
+.dropdown-menu ul li a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #fff;
+    transition: background 0.5s;
+}
+
+.dropdown-menu ul li a:hover {
+    background: #2ecc71;
+}
+
+.dropdown-menu {
+    position: absolute;
+    right: 0;
+    top: 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #333;
+    border-radius: 8px;
+    overflow: hidden;
+    display: none;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 100;
+}
+
+.dropdown-menu.visible {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+    .products {
+        width: 100%;
+    }
+
+    .header input {
+        width: 70%;
+    }
+}
+
+.product .favorite-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    z-index: 10;
+    color: #5e6168;
+}
+
+.product .favorite-btn.active {
+    color: #1EFF00;
+    /* Warna hijau saat di-like */
+}
+
+.product .favorite-btn:hover {
+    color: #1EFF00;
+    /* Warna saat hover */
+}
+
+/* Styling untuk link detail */
+.product .detail-link {
+    position: absolute;
+    bottom: 27px;
+    right: 15px;
+    background-color: white;
+    text-decoration: none;
+    padding: 5px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+}
+
+.product .detail-link:hover {
+    background-color: #1e8e2f;
+}
+
+/* Styling kategori */
+.product .category {
+    font-size: 12px;
+    font-family: "Inter", serif;
+    font-weight: 400;
+    color: #8A8A8A;
+    /* Warna kategori, bisa disesuaikan */
+    text-align: left;
+}
